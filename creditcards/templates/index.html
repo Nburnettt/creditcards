@@ -1,0 +1,21 @@
+    {% extends 'base.html' %}
+
+    {% block body %}
+    <div id="container">
+        <h1>Home</h1>
+        <table>
+          <tr>
+            <th>Issuer</th>
+            <th>Card</th>
+            <th>Rewards Type</th>
+          </tr>
+          {% for card in cards %}
+          <tr>
+            <td>{{ card.issuer }}</td>
+            <td>{{ card.name }}</td>
+            <td>{{ card.reward }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+    </div>
+    {% endblock %}
